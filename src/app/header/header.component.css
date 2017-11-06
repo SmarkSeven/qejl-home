@@ -1,0 +1,140 @@
+
+.navber-brand {
+  display: inline-block;
+  line-height: 60px;
+  font-size: 22px;
+  /* color: #6173f4; */
+}
+
+.navber-brand > img {
+  float: left;
+  margin: 0 10px;
+  margin-top: 8px;
+  height: 45px;
+  width: 45px;
+}
+
+nav {
+  position: absolute;
+  line-height: 60px;
+  right: 0;
+  top: 0;
+}
+
+.navbar-burger {
+  display: none;
+}
+
+.navbar-burger .burger {
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 20px;
+  top: 50%;
+  left: 10px;
+  background-color: #000;
+  transition: all 86ms ease-out;
+}
+
+.navbar-burger .burger:nth-child(1) {
+  top: calc(50% - 6px);
+}
+
+.navbar-burger .burger:nth-child(3) {
+  top: calc(50% + 6px);
+}
+
+.navbar-burger.is-active .burger:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.navbar-burger.is-active .burger:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-burger.is-active .burger:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+
+@media screen and (min-width: 700px) {
+  ul {
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+  }
+
+  li {
+    padding: 0 16px;
+    font-size: 14px;
+  } 
+
+  li > a {
+    transition: all .5;
+  }
+
+  li > a.isActive {
+    padding-bottom: 4px;
+    color: #108ee9;
+    border-bottom: 2px solid #108ee9;
+  }
+
+  li > .login-btn {
+    padding: 6px 14px;
+    color: #fff;
+    background: #108ee9;
+  }
+}
+
+@media screen and (max-width: 700px) { 
+  .navbar-burger {
+    cursor: pointer;
+    display: block;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    margin-left: auto;
+  }
+
+  ul {
+    height: 0;
+    overflow: hidden;
+    transition: 200ms ease-out;
+  }
+
+  ul.is-active {
+    height: 220px;
+  }
+
+  ul.is-active li {
+    display: block;
+    line-height: 40px;
+  }
+
+  ul.is-active li a{
+    display: block;
+    padding: 0 50px;
+    font-size: 14px;
+    color: #4a4a4a;
+  }
+
+  ul.is-active li a.isActive, ul.is-active li a:hover{
+    color: #108ee9;
+    background-color: white;
+  }
+  
+  nav {
+    top: 100%;
+    width: 100%;
+    background: rgb(247, 245, 245);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  button {
+    display: none;
+  }
+}

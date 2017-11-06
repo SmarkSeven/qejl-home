@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../node_modules/basscss/css/basscss.min.css';
+@import "~element-angular/theme/index.css";
+body {
+  margin: 0;
+}
+
+header {
+  position: fixed;
+  margin-top: -21.438px;
+  width: 100vw;
+  background: #fff;
+  z-index: 99;
+}
+
