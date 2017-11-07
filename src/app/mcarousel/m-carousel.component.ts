@@ -55,7 +55,7 @@ import { carouselBtnLeftAnimation, carouselBtnRightAnimation } from './animation
   styleUrls: ['./m-carousel.component.css']
 })
 export class MCarouselComponent implements AfterViewInit, OnChanges, OnDestroy {
-  height: string
+  @Input() height: string
   @Input() trigger: string = 'click'
   @Input() indicatorTrigger: string = 'click'
   @Input() autoplay: boolean = true

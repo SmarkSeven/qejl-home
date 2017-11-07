@@ -8,7 +8,7 @@ import { Component, Input, Provider } from '@angular/core';
 })
 export class ItemComponent {
   @Input()
-  item: [Item]
+  item: Item
 
   @Input()
   qqLink: boolean

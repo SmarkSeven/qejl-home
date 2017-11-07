@@ -16,13 +16,13 @@
       <li>
         <a href="#question" [class.isActive]="lastEl === 'questionLink'">常见问题</a>
       </li>
-      <li>
+      <li class="is-centered">
         <a href="#cantact" [class.isActive]="lastEl === 'cantactLink'">联系我们</a>
       </li>
       <li>
-        <button nz-button [nzType]="'primary'">
+        <a target="_blank" href="/user/" class="button is-info is-small link-btn">
           登录
-        </button>
+        </a>
       </li>
     </ul>
   </nav>

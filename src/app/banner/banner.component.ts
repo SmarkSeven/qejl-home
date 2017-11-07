@@ -1,5 +1,17 @@
-import { Component, ContentChildren, ElementRef, Input, OnInit, AfterContentInit, QueryList, Renderer2, ViewChild } from '@angular/core';
+import {
+  AfterContentInit,
+  animate,
+  Component,
+  ContentChildren,
+  ElementRef,
+  Input,
+  OnInit,
+  QueryList,
+  Renderer2,
+  ViewChild,
+} from '@angular/core';
 import { NavigaterService } from '../navigaterService';
+import { fadeAnimation } from './animations';
 
 interface Item {
 
@@ -7,6 +19,7 @@ interface Item {
 
 @Component({
   selector: 'banner',
+  animations: [fadeAnimation],
   templateUrl: './banner.component.html',
   styleUrls: ['./banner.component.css']
 })
@@ -20,7 +33,7 @@ export class BannerComponent implements OnInit {
   }, {
     title: '操作简单，一目了然',
     subTitle: '操作人性化，简单易用，200天精雕细琢，只为遇见美的你',
-    label: '马上下载APP'
+    label: '立即下载APP'
   },{
     title: '海量商品，超低价格',
     subTitle: '空间人气、游戏辅助、想你所想，最优惠的价格为你所想',

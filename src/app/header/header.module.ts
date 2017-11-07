@@ -1,12 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { PageHeaderComponent } from './header.component'
 
 @NgModule({
   imports: [
-    CommonModule,
-    NgZorroAntdModule
+    CommonModule
   ],
   declarations: [
     PageHeaderComponent
